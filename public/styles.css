@@ -44,3 +44,94 @@ h1 {
   font-weight: bold;
   font-size: 1.5rem;
 }
+
+/* ---------------------------
+   Pink Theme (Bootstrap override)
+---------------------------- */
+:root {
+  --pink-50:  #fff1f6;
+  --pink-100: #ffe4ee;
+  --pink-200: #fecddf;
+  --pink-300: #fda4c7;
+  --pink-400: #fb7185;
+  --pink-500: #ec4899;
+  --pink-600: #db2777;
+  --pink-700: #be185d;
+
+  /* Bootstrap CSS variables override */
+  --bs-primary: var(--pink-600);
+  --bs-primary-rgb: 219, 39, 119;
+
+  --bs-link-color: var(--pink-700);
+  --bs-link-hover-color: var(--pink-600);
+}
+
+body.bg-light {
+  background: linear-gradient(180deg, var(--pink-50), #ffffff 60%) !important;
+}
+
+/* Buttons */
+.btn-primary {
+  --bs-btn-bg: var(--pink-600);
+  --bs-btn-border-color: var(--pink-600);
+  --bs-btn-hover-bg: var(--pink-700);
+  --bs-btn-hover-border-color: var(--pink-700);
+  --bs-btn-active-bg: var(--pink-700);
+  --bs-btn-active-border-color: var(--pink-700);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--pink-700);
+  --bs-btn-border-color: var(--pink-400);
+  --bs-btn-hover-bg: var(--pink-600);
+  --bs-btn-hover-border-color: var(--pink-600);
+  --bs-btn-hover-color: #fff;
+}
+
+/* Card + headings */
+.card {
+  border-radius: 16px;
+}
+
+h3, h5 {
+  color: var(--pink-700);
+}
+
+/* Info alert -> make it pink-ish */
+.alert-info {
+  color: #6b1f3f;
+  background: var(--pink-100);
+  border-color: var(--pink-200);
+}
+
+/* Inputs focus ring */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--pink-400);
+  box-shadow: 0 0 0 0.25rem rgba(219, 39, 119, 0.18);
+}
+
+/* Progress bar */
+.progress-bar {
+  background-color: var(--pink-600);
+}
+
+/* Guide section */
+.guide-card {
+  background: #fff;
+}
+.guide-badge {
+  border: 1px solid var(--pink-200);
+  color: var(--pink-700) !important;
+  background: var(--pink-50) !important;
+}
+.guide-table thead th {
+  color: var(--pink-700);
+  background: var(--pink-50);
+}
+.guide-table tbody tr:hover {
+  background: rgba(236, 72, 153, 0.06);
+}
+
+#fileInputText { cursor: pointer; }
+#fileBrowseBtn { white-space: nowrap; }
